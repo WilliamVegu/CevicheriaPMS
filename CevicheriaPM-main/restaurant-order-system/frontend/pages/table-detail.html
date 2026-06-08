@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Mesa - Sistema de Meseros</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="profile-info">
+            <div class="profile-avatar" id="profileAvatar">JP</div>
+            <div class="profile-details">
+                <h1 id="waiterName">Cargando...</h1>
+                <p id="waiterRole">Mesero</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="container">
+        <!-- VISTA DE DETALLE DE MESA -->
+        <div class="table-detail active">
+            <button class="back-button" onclick="goBack()">
+                ← Volver a mesas
+            </button>
+
+            <div class="detail-header">
+                <h2 id="detailTableName">Mesa 1</h2>
+                <p>Pedido actual</p>
+            </div>
+
+            <div class="order-section">
+                <h3>Productos pedidos</h3>
+                <div class="order-list" id="orderList">
+                    <!-- Los items del pedido se cargarán aquí -->
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🍽️</div>
+                        <p>No hay productos en esta mesa</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTENEDOR DE ACCIONES DE COMANDA (ENTREGAR / COBRAR) -->
+            <div id="orderActionContainer" style="margin-top: 16px; margin-bottom: 16px;"></div>
+
+            <!-- BOTÓN PARA AGREGAR PRODUCTOS (para futuras funcionalidades) -->
+            <button class="btn-add-product" onclick="addProduct()">
+                + Agregar producto
+            </button>
+        </div>
+    </div>
+
+    <script src="../assets/js/api.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/orders.js"></script>
+</body>
+</html>

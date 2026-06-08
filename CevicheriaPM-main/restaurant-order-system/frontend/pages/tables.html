@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesas - Sistema de Meseros</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+    <!-- HEADER CON PERFIL DEL MESERO -->
+    <header class="header">
+        <div class="profile-info">
+            <div class="profile-avatar" id="profileAvatar">JP</div>
+            <div class="profile-details">
+                <h1 id="waiterName">Cargando...</h1>
+                <p id="waiterRole">Mesero</p>
+            </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <button onclick="showVisualMenu()" style="background-color: #3182ce; color: white; border: none; padding: 8px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 14px; transition: background-color 0.2s;">📖 Ver Carta</button>
+            <button class="logout-btn" onclick="logout()">Salir</button>
+        </div>
+    </header>
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="container">
+        <!-- VISTA DE MESAS (Pantalla Principal) -->
+        <div class="tables-view" id="tablesView">
+            <div class="section-title">
+                <span>📋</span>
+                Seleccione una mesa
+            </div>
+            <div class="tables-grid" id="tablesGrid">
+                <!-- Las mesas se generarán dinámicamente desde el backend -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/api.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/tables.js"></script>
+</body>
+
+</html>
